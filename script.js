@@ -1,18 +1,10 @@
-const contactForm = document.querySelector('#contactForm');
-const nameInput = document.querySelector('#name');
-const emailInput = document.querySelector('#email');
-const messageInput = document.querySelector('#message');
-
-contactForm.addEventListener('submit', (event) => {
+document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const name = nameInput.value;
-    const email = emailInput.value;
-    const message = messageInput.value;
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
 
     alert(`Thank you, ${name}! Your message has been sent.`);
-    
-    // Clear the form after submission (optional)
-    contactForm.reset();
 });
 
