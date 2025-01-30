@@ -7,8 +7,6 @@
     <title>Srieevathsan's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Supabase JS SDK -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0-beta.2/dist/umd/supabase.min.js"></script>
 </head>
 
 <body>
@@ -30,7 +28,7 @@
         <div class="text-content">
             <h1>I'm Srieevathsan</h1>
             <div class="text-animation">
-                <h2>Frontend Developer</h2>
+                <h2>Frontend Developer Trainee</h2>
             </div>
             <p>I am passionate about building user-friendly and efficient web applications while continuously learning and growing in the tech industry.</p>
             <div class="btn-section">
@@ -43,15 +41,15 @@
                 <i class='bx bxl-youtube' style="--vlr:9"></i>
             </div>
         </div>
-        <img src="profile.png" alt="">
+        <img src="MdSay.png" alt="">
     </section>
 
     <!-- *************************About Section************************* -->
     <section class="about" id="about">
         <h2 class="title">About <span>Me</span></h2>
-        <img src="profile.png" alt="" class="aboutImg">
+        <img src="MdSay.png" alt="" class="aboutImg">
         <div class="text-content2">
-            <h2>Frontend Developer</h2>
+            <h2>Frontend Developer Trainee</h2>
             <p>Hi, I'm Srieevathsan, a passionate frontend developer trainee at Webxela. With a background in Computer Science and Engineering, I have a strong foundation in Java and web technologies. I'm eager to build user-friendly and efficient web applications while continuously learning and growing in the tech industry.</p>
             <button class="btn">Read More</button>
         </div>
@@ -125,17 +123,17 @@
 
     <!-- *************************Contact Section************************* -->
     <section class="contact" id="contact">
-        <h2 class="title">Contact <span>Me</span></h2>
-        <form id="contactForm">
+        <h2 class="title">Contact<span>Me</span></h2>
+        <form action="#" id="">
             <div class="input-box">
-                <input type="text" id="name" required placeholder="Full Name">
-                <input type="email" id="email" required placeholder="Email">
+                <input type="text" required placeholder="Full Name">
+                <input type="email" required placeholder="Email">
             </div>
             <div class="input-box">
-                <input type="tel" id="phone" required placeholder="Mobile Number">
-                <input type="text" id="subject" required placeholder="Subject For">
+                <input type="tel" required placeholder="Mobile Number">
+                <input type="email" required placeholder="Subject For">
             </div>
-            <textarea id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message" required></textarea>
             <input type="submit" value="Send Message" class="btn">
         </form>
     </section>
@@ -146,52 +144,7 @@
         </div>
         <a href="#"> <i class='bx bx-up-arrow-alt'></i></a>
     </footer>
-
-    <script>
-        // Initialize Supabase
-        const SUPABASE_URL = "https://wofbczrmolboezbgsdyh.supabase.co";  // Replace with your Supabase URL
-        const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndvZmJjenJtb2xib2V6YmdzZHloIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzgyMTE2MzksImV4cCI6MjA1Mzc4NzYzOX0.7BKQmz7_S6K12uUGUeeQBbTwExyyxmsclS5C_zYsFTQ";  // Replace with your Supabase Anon Key
-
-        // Create a Supabase client
-        const { createClient } = supabase;
-        const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-        // Get the form element
-        const form = document.getElementById("contactForm");
-
-        form.addEventListener("submit", async (event) => {
-            event.preventDefault();  // Prevent default form submission
-
-            // Collect form data
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const phone = document.getElementById("phone").value;
-            const subject = document.getElementById("subject").value;
-            const message = document.getElementById("message").value;
-
-            // Insert data into the Supabase table
-            const { data, error } = await supabase
-                .from("contact_messages")  // Reference the table name
-                .insert([
-                    {
-                        name: name,
-                        email: email,
-                        phone: phone,
-                        subject: subject,
-                        message: message,
-                    }
-                ]);
-
-            // Handle the response
-            if (error) {
-                console.error("Error submitting form:", error);
-                alert("There was an error submitting the form. Please try again.");
-            } else {
-                alert("Your message has been sent successfully!");
-                form.reset();  // Reset the form fields
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
