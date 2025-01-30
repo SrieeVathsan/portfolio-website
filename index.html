@@ -1,82 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Srieevathsan's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="resume.pdf" download>Resume</a></li>
-            </ul>
+    <!-- *************************Navbar************************* -->
+    <header class="header">
+        <a href="#" class="logo">Srieevathsan</a>
+        <i class='bx bx-menu' id="menu" style='color:#ffffff'></i>
+        <nav class="navbar">
+            <a href="#home" style="--vlr:1" class="active">Home</a>
+            <a href="#about" style="--vlr:2">About Me</a>
+            <a href="#education" style="--vlr:3">Education</a>
+            <a href="#skills" style="--vlr:4">Skills</a>
+            <a href="#contact" style="--vlr:5">Contact Me</a>
+            <a href="resume.pdf" download>Resume</a>
         </nav>
     </header>
 
-    <section id="home">
+    <!-- *************************Home Section************************* -->
+    <section class="home" id="home">
+        <div class="text-content">
+            <h1>I'm Srieevathsan</h1>
+            <div class="text-animation">
+                <h2>Frontend Developer Trainee</h2>
+            </div>
+            <p>Passionate about building user-friendly web applications and constantly improving my skills in web development.</p>
+            <div class="btn-section">
+                <button class="btn">Hire me</button>
+                <button class="btn">Let's Talk</button>
+            </div>
+            <div class="social-media">
+                <i class='bx bxl-twitter' style="--vlr:7"></i>
+                <i class='bx bxl-linkedin' style="--vlr:8"></i>
+                <i class='bx bxl-github' style="--vlr:9"></i>
+            </div>
+        </div>
         <img src="images/profile.png" alt="Profile Picture">
-        <h2>Welcome to My Portfolio</h2>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Srieevathsan, a passionate frontend developer trainee at Webxela.<br>
-            With a background in Computer Science and Engineering,<br>
-            I have a strong foundation in Java and web technologies.<br>
-            I'm eager to build user-friendly and efficient web applications<br>
-            while continuously learning and growing in the tech industry.</p>
+    <!-- *************************About Section************************* -->
+    <section class="about" id="about">
+        <h2 class="title">About <span>Me</span></h2>
+        <img src="images/profile.png" alt="About Me Image" class="aboutImg">
+        <div class="text-content2">
+            <h2>Frontend Developer</h2>
+            <p>With a background in Computer Science and Engineering, I am eager to build user-friendly and efficient web applications. I'm constantly learning new web technologies to stay up-to-date with industry trends.</p>
+            <button class="btn">Read More</button>
+        </div>
     </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Java</li>
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>Web Development</li>
-            <li>Figma</li>
-        </ul>
+    <!-- *************************Education Section************************* -->
+    <section class="education" id="education">
+        <h2 class="title">My <span>Education</span></h2>
+        <div class="row">
+            <div class="column">
+                <h3>Degree</h3>
+                <div class="box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year">2019-2023</div>
+                            <h3>Bachelor of Engineering in Computer Science</h3>
+                            <p>Completed my undergraduate degree with a strong focus on programming and web development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <p>Bachelor of Engineering<br>
-           Computer Science and Engineering<br>
-           2019-2023
-        </p>
+    <!-- *************************Skills Section************************* -->
+    <section class="skills" id="skills">
+        <h2 class="title">My <span>Skills</span></h2>
+        <div class="wrapper">
+            <div class="skill-content">
+                <h3 class="skill-title">Languages</h3>
+                <div class="skill-box skill-box1">
+                    <div class="single-skill">
+                        <span class="topic">HTML</span>
+                        <span class="topic">90%</span>
+                    </div>
+                    <div class="bar-side">
+                        <div class="bar bar-1"></div>
+                    </div>
+                    <div class="single-skill">
+                        <span class="topic">CSS</span>
+                        <span class="topic">80%</span>
+                    </div>
+                    <div class="bar-side">
+                        <div class="bar bar-2"></div>
+                    </div>
+                    <div class="single-skill">
+                        <span class="topic">JavaScript</span>
+                        <span class="topic">70%</span>
+                    </div>
+                    <div class="bar-side">
+                        <div class="bar bar-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
+    <!-- *************************Contact Section************************* -->
+    <section class="contact" id="contact">
+        <h2 class="title">Contact <span>Me</span></h2>
         <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Your Name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Your Email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-
-            <button type="submit">Send Message</button>
+            <div class="input-box">
+                <input type="text" id="name" required placeholder="Full Name">
+                <input type="email" id="email" required placeholder="Email">
+            </div>
+            <div class="input-box">
+                <input type="tel" id="phone" required placeholder="Mobile Number">
+                <input type="text" id="subject" required placeholder="Subject">
+            </div>
+            <textarea id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
         </form>
-        <p id="responseMessage"></p>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2025 Srieevathsan. All rights reserved.</p>
+        <div class="text">
+            <p>© 2025 Srieevathsan. All Rights Reserved.</p>
+        </div>
+        <a href="#"> <i class='bx bx-up-arrow-alt'></i></a>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
 
 
