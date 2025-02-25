@@ -244,6 +244,23 @@ section{
 .btn:hover::before{
     top: 0;
 }
+.resume-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    border: 2px solid transparent;
+}
+.resume-btn:hover {
+    background: transparent;
+    color: #ff758c;
+    border: 2px solid #ff758c;
+}
 .social-media {
     margin: 2rem 0;
 }
